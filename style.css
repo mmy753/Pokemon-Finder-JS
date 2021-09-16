@@ -1,0 +1,317 @@
+html{
+    height: 100%;
+}
+body{
+    font-family: Arial;
+    background-image: url(img/poke-back.png);
+    background-size: cover;
+    height: 100%;
+}
+.split{
+    height: 100%;
+    width: 30%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 1.25rem;
+}
+.split2{
+    height: 100%;
+    width: 70%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 0px;
+} 
+.left{
+    left: 0;
+    background-image: url(img/gameboy-back.png);
+    background-size: cover;
+}
+.right{
+    right: 0;
+}
+.centered2{
+    position: flex;
+    margin: 7rem;
+    margin-top: 0px;
+}
+.pkmn-card{
+    width: 13.438rem;
+    height: 18.75rem;
+    margin: 1rem;
+}
+.gameboy{
+    background-color: #31adff;
+    width: 20rem;
+    height: 32rem;
+    margin: auto;
+    border-radius: 1.25rem 1.25rem 3.125rem;
+    border: 0.3rem solid;
+    border-color: #000000;
+    box-shadow: inset -0.4rem 0 rgba(0, 0, 0, 0.2), inset 0.5rem 0 rgba(255, 255, 255, 0.3);
+    position: relative;
+}
+header{
+    width: 100%;
+    height: 2.5rem;
+    border-bottom: 0.4rem solid #000000;
+    box-shadow: 0 0.3rem rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+header:after, header:before{
+    content:"";
+    height: 100%;
+    width: 0.4rem;
+    background-color: #000000;
+    position: absolute;
+}
+header:before{
+left: 2rem;
+}
+header:after{
+right: 2rem;
+}
+.screen{
+    width: 15.375rem;
+    background-color: #2f3030;
+    margin: 1.875rem 0 0 1.875rem;
+    border: 0.4rem solid #000000;
+    padding: 1.875rem;
+    border-radius: 0.625rem 0.625rem 1.875rem;
+    position: relative;
+}
+.screen .glass{
+    width: 100%;
+    height: 10rem;
+    background-color: #28c520;
+    border: 0.4rem solid #000000;
+    box-shadow: inset 0.4rem 0.4rem rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+}
+.glass:after, .glass:before{
+    content: "";
+    height: 200%;
+    width: 1.875rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    transform: rotate(45deg);
+    top: -5rem;
+}
+.glass:after{
+    right: -1.25rem;
+    width: 3.125rem;
+}
+.screen span{
+    width: 0.625rem;
+    height: 0.625rem;
+    background-color: #c3257b;
+    position: absolute;
+    left: 2.8125rem;
+    border-radius: 50%;
+    border: 0.2rem solid #000000;
+    top: 50%;
+    margin-top: -0.625rem;
+}
+.screen:after, .screen:before{
+    content:"";
+    height: 0.188rem;
+    position: absolute;
+    top: 0.75rem;
+    background-color: #000000; 
+}
+.screen:after{
+    width: 1.875rem;
+    right: 3.125rem;
+}
+.actions{
+    padding: 1.875rem 0.875rem 0;
+}
+.directions{
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: 50%;
+    border: 0.4rem solid #000000;
+    background-color: #2f3030;
+    position: relative;
+    display: flex;
+    float: left;
+}
+.directions button{
+    border: 0.4rem solid #000000;
+    background-color: #363636;
+    width: 1.875rem;
+    height: 1.875rem;
+    position: absolute;
+    z-index: 9;
+}
+.arrow-left{
+    border-right: none !important;
+    box-shadow: inset 0.188rem 0.188rem #fff;
+    top: 50%;
+    margin-top: -0.938rem;
+    left: 0.844rem;
+}
+.arrow-top{
+    border-bottom: none !important;
+    box-shadow: inset 0 0.188rem #fff, inset 0.188rem 0 #fff;
+    left: 50%;
+    margin-left: -0.938rem;
+    top: 0.844rem;
+}
+.arrow-right{
+    border-left: none !important;
+    box-shadow: inset 0 0.188rem #fff;
+    top: 50%;
+    margin-top: -0.938rem;
+    right: 0.844rem;
+}
+.arrow-bottom{
+    border-top: none !important;
+    box-shadow: inset 0.188rem 0 #fff;
+    left: 50%;
+    margin-left: -0.938rem;
+    bottom: 0.844rem;
+}
+.directions:after{
+    content: "";
+    width: 1.875rem;
+    height: 1.875rem;
+    background-color: #363636;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin: -0.938rem;
+    z-index: 1;
+}
+.buttons{
+    border: 0.4rem solid #000000;
+    padding: 0.5rem 0.188rem;
+    background-color: #363636;
+    border-radius: 6.25rem;
+    float: right;
+    margin-right: 2rem;
+    position: relative;
+    transform: rotate(-20deg);
+    top: 1.875rem;
+}
+.buttons button{
+    background-color:#28c520;
+    border: 0.4rem solid #000000;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    box-shadow: inset 0.25rem 0 rgba(255,255,255,0.7), inset -0.25rem 0 rgba(0,0,0,0.2) ;
+    margin: 0 0.125rem;
+}
+input{
+    background-color: #363636 !important;
+    border: none !important;
+    color: white;
+    margin-top: 3.5rem;
+}
+@media (max-width: 589px){
+.left{
+    height: 35vh;
+    padding-top: 0;
+    background-image: none;
+    background-color: #31adff;
+}
+.split{
+    width: 100%;
+    position: static;
+}
+.split2{
+    width: 100%;
+    position: static;
+}
+.right{
+    height: 100%;
+}
+.gameboy{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    height: 38vh;
+    width: 100vw;
+    padding-top: 0;
+}
+.screen{
+    margin-top: 8vh;
+    z-index: -1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 0;
+    width: 50vw;
+    height: 28vh;
+    margin-bottom: 0;
+    position: fixed;
+    margin-left: 1vw;
+}
+.actions{
+    display: none;
+}
+.buttons{
+    margin-top: 8vh;
+    z-index: 9;
+    top: 0px;
+}
+}
+@media (max-width: 1051px) and (min-width:590px){ 
+.left{
+    height: 35vh;
+    padding-top: 0;
+    background-image: none;
+    background-color: #31adff;
+}
+.split{
+    width: 100%;
+    position: static;
+}
+.split2{
+    width: 100%;
+    position: static;
+}
+.right{
+    height: 100%;
+}
+.gameboy{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    height: 38vh;
+    width: 100vw;
+    padding-top: 0;
+}
+.screen{
+    margin-top: 8vh;
+    z-index: -1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 0;
+    width: 35vw;
+    height: 28vh;
+    margin-bottom: 0;
+    position: fixed;
+}
+.actions{
+    z-index: 2;
+    margin-top: 0px;
+    margin-left: 50vw;
+    position: fixed;
+}
+.directions{
+    margin-top: 4vh;
+}
+.buttons{
+    margin-top: 10vh;
+    z-index: 9;
+    top: 0px;
+}
+}
